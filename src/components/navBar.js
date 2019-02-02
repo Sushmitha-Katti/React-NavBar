@@ -14,18 +14,19 @@ const NavWrapper = styled.div`
     font-family: "Arial, Helvetica, sans-serif;";
     .nav {
       width: 100%;
-     
+      position: fixed;
+      top:0;
       display: flex;
       justify-content: space-between;
       align-items: center;
       background: black;
       height: 100px;
       justify-content: flex-start;
-      position: sticky;
       
     }
     .navsmaller {
       height:70px;
+      position:fixed;
       
      
     }
@@ -106,6 +107,7 @@ const NavWrapper = styled.div`
   
   
     @media (max-width: 800px) {
+      
   
       .nav > .nav-header {
         padding: 0 10% ;
@@ -148,28 +150,30 @@ const NavWrapper = styled.div`
       .nav > .nav-links {
         position: absolute;
         display: block;
-       
+        margin-left:0;
         width: 100%;
         background-color: black;
         height: 0px;
         transition: all 0.3s ease-in;
         overflow-y: hidden;
         top: 50px;
-        left: 0px;
+        left: 0;
         z-index: 2;
       }
       .nav > .nav-links > a {
         display: block;
-        width: 100%;
+        width:
         color: #f7bb2f;
+        left:0;
+        right : 0;
       }
       .nav > #nav-check:not(:checked) + .nav-links {
         height: 0px;
       }
       .nav > #nav-check:checked + .nav-links {
-        height: calc(100vh - 50px);
-        overflow-y: auto;
-        width:100%;
+        height: auto;
+        overflow-y: hidden;
+      
       }
     }
     @media ( max-width: 600px){
