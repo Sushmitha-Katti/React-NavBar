@@ -1,3 +1,6 @@
+#React-NavBar
+This is a implementation of navbar using react and styled components for learning react.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
